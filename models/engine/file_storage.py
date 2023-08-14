@@ -20,15 +20,15 @@ class FileStorage():
 
     def all(self):
         """
-        Publicly accessible instance method that 
+        Publicly accessible instance method that
         retrieves the dictionary named "__objects"
         """
         return FileStorage.__objects
 
     def new(self, obj):
         """
-        Publicly accessible instance method that adds 
-        the "obj" to the "__objects" dictionary using 
+        Publicly accessible instance method that adds
+        the "obj" to the "__objects" dictionary using
         the key "<obj class name>.id".
         Variables:
         ----------
@@ -40,9 +40,9 @@ class FileStorage():
 
     def save(self):
         """
-        Instance method accessible to the public that 
-        converts "__objects" dictionary into JSON 
-        format and saves it to the JSON file 
+        Instance method accessible to the public that
+        converts "__objects" dictionary into JSON
+        format and saves it to the JSON file
         located at "__file_path".
         Variables:
         ----------
@@ -56,8 +56,8 @@ class FileStorage():
 
     def reload(self):
         """
-        Publicly accessible instance method that takes 
-        JSON file and converts its contents into 
+        Publicly accessible instance method that takes
+        JSON file and converts its contents into
         the "__objects" dictionary.
         """
         try:
