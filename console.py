@@ -34,7 +34,7 @@ class HBNBCommand(cmd.Cmd):
         if len(args) == 0:
             print("** class name missing **")
         elif args[0] not in HBNBCommand.__classes:
-            print("** class doesn't exist **")
+            print("** class name missing **")
         else:
             new_creation = eval(args[0] + '()')
             models.storage.save()
@@ -48,7 +48,7 @@ class HBNBCommand(cmd.Cmd):
         if len(strings) == 0:
             print("** class name missing **")
         elif strings[0] not in HBNBCommand.__classes:
-            print("** class doesn't exist **")
+            print("** class name missing **")
         elif len(strings) == 1:
             print("** instance id missing **")
         else:
@@ -69,7 +69,7 @@ class HBNBCommand(cmd.Cmd):
         if len(args) == 0:
             print('** class name missing **')
         elif args[0] not in HBNBCommand.__classes:
-            print("** class doesn't exist **")
+            print("** class name missing **")
         elif len(args) == 1:
             print('** instance id missing **')
         else:
@@ -93,7 +93,7 @@ class HBNBCommand(cmd.Cmd):
                 new_list.append(obj.__str__())
             print(new_list)
         elif args[0] not in HBNBCommand.__classes:
-            print("** class doesn't exist **")
+            print("** class name missing **")
         else:
             for obj in objects.values():
                 if obj.__class__.__name__ == args[0]:
@@ -110,7 +110,7 @@ class HBNBCommand(cmd.Cmd):
         if len(args) == 0:
             print("** class name missing **")
         elif args[0] not in HBNBCommand.__classes:
-            print("** class doesn't exist **")
+            print("** class name missing **")
         elif len(args) == 1:
             print("** instance id missing **")
         elif len(args) == 2:
@@ -153,7 +153,7 @@ class HBNBCommand(cmd.Cmd):
                     key = args[0] + '.' + args[1]
                     return key
                 else:
-                    print("** class doesn't exist **")
+                    print("** class name missing **")
                     return None
 
     def do_quit(self, args):
